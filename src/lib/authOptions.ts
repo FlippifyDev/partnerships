@@ -3,7 +3,7 @@ import { auth } from "@/lib/firebase/config";
 import { IUser } from "@/models/user";
 import { IJwtToken } from "@/models/jwt-token";
 import { retrieveUserAdmin } from "@/services/firebase/retrieve-admin";
-import { retrieveUserAndCreate } from "@/services/firebase/retrieve";
+import { retrieveUser } from "@/services/firebase/retrieve";
 
 // External Imports
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -50,7 +50,7 @@ export const authOptions: NextAuthOptions = {
                 token.email = user.email;
                 try {
                     // Retrieve User and Create
-                    const userDoc: IUser = (await retrieveUserAndCreate(user.id, user.email) ?? {}) as IUser;
+                    const userDoc: IUser = (await retrieveUser(user.id) ?? {}) as IUser;
                     token.user = userDoc
                 } catch (error) {
                     console.error('Error retrieving user:', error);
