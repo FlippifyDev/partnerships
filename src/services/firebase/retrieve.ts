@@ -24,7 +24,7 @@ async function retrieveUser(uid: string): Promise<IUser | void> {
             // Return the user data as an IUser object
             return userDoc.data() as IUser;
         } else {
-                throw new Error('User not found');
+            throw new Error('User not found');
         }
     } catch (error) {
         console.error('Error retrieving user:', error);
