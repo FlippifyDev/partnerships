@@ -71,17 +71,17 @@ const Page = () => {
     }, [])
 
     return (
-        <div className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center p-4 -mt-24 gap-16">
+        <div className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center p-4 -mt-24 gap-16 text-white">
             {(status === "active" || status === null) && (
                 <>
-                    <div className="bg-white rounded-3xl shadow-lg w-full max-w-md p-8">
+                    <div className="bg-(--color-bg) rounded-3xl shadow shadow-white w-full max-w-md p-8">
                         {/* Logo */}
-                        <h2 className={`${lato.className} pb-1 text-[40px] flex justify-center font-bold mb-4 text-black`}>
+                        <h2 className={`${lato.className} pb-1 text-[40px] flex justify-center font-bold mb-4`}>
                             flippify
                         </h2>
 
                         {/* Title & Subtitle */}
-                        <h2 className="text-2xl font-semibold text-center mb-2 text-black">
+                        <h2 className="text-2xl font-semibold text-center mb-2">
                             Welcome back
                         </h2>
                         <p className="text-center text-gray-500 mb-6">
@@ -103,7 +103,6 @@ const Page = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="h-10"
-                                aria-required="false"
                             />
                             {errorMessage && (
                                 <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
@@ -122,13 +121,13 @@ const Page = () => {
                         </form>
 
                         {/* Sign Up Link */}
-                        <div className="flex flex-row gap-1 mt-5 justify-center text-black">
+                        <div className="flex flex-row gap-1 mt-5 justify-center">
                             <p>Don&apos;t have an account?</p>
                             <button
-                                onClick={() => router.push("/sign-up")}
+                                onClick={() => window.open("https://flippify.io/l/partnerships", "_blank", "noopener,noreferrer")}
                                 className="text-(--color-houseBlue) hover:underline"
                             >
-                                Sign Up
+                                Apply
                             </button>
                         </div>
                     </div>
