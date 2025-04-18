@@ -1,0 +1,7 @@
+export const discordSupportLink = "https://discord.com/channels/1236428617962229830/1236436288442466394"
+export const discordLink = "https://discord.gg/gNPYfe7YFm"
+export const githubLink = "https://github.com/FlippifyDev"
+export const instagramLink = "https://www.instagram.com/_flippify/"
+export const productHuntLink = "https://www.producthunt.com/products/flippify"
+export const tiktokLink = "https://www.tiktok.com/@flippifyuk?lang=en"
+export const xLink = "https://x.com/flippify_io"
